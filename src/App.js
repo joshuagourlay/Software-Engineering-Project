@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Inventory from "./pages/Inventory";
+import React,{useState} from "react";
+import {Signin} from "./pages/credentials"
+import flower from "./images/flower.jpeg"
 
-function App() {
+
+export default function App() {
+  
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+     <BrowserRouter>
+      <Routes>
+        <Route index element={<Home/>}/>
+
+        <Route path="/Home" element={<Home cName="hero" heroImg={flower} 
+        title="GIFT A BOUQUET" text="FOR THEIR SPECIAL DAY" buttonText="SHOP NOW" 
+        url="http://localhost:3000/Inventory" 
+        btnClass="show"/>}/>
+
+        <Route path="/Inventory" element={<Inventory/>}/>
+        <Route path="/signin" element={<Signin/>}/>
+
+        </Routes>
+
+     </BrowserRouter>
     </div>
   );
 }
-
-export default App;

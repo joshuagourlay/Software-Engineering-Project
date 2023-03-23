@@ -1,0 +1,52 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: whitesmoke;
+    box-shadow: 10 10px 10px rgba(0, 0, 0, 0.5);
+    background-color: rgb(210, 238, 222);
+    padding:10px 10px 10px 10px;
+
+  }
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  #navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+  }
+  #navbar li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: blueviolet;
+    transition: 0.3s ease-in-out;
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: lightcoral;
+  }
+  
+ 
+  
+  .site-title {
+    font-family:'Poppins',Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    color: Black;
+    font-weight: 800;
+  }
+  
+  body {
+    margin: 0;
+    background-color: white;
+  }
+  
+  
+  
