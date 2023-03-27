@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Inventory from "./pages/Inventory";
 import {Signin} from "./pages/credentials"
 import flower from "./images/flower.jpeg"
-
+import flower2 from "./images/flower2.webp"
 
 export default function App() {
   
@@ -24,7 +24,8 @@ export default function App() {
         url="http://localhost:3000/Inventory" 
         btnClass="show"/>}/>
 
-        <Route path="/Inventory" element={<Inventory/>}/>
+        <Route path="/Inventory" element={<Inventory cName="hero-in" heroImg={flower2} 
+        title="OUR SPECIALS!" text="SPRING SEASONS BEST"/>}/>
         <Route path="/signin" element={<Signin/>}/>
 
         </Routes>

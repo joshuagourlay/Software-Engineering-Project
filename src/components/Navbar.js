@@ -4,9 +4,9 @@ import "./NavbarStyle.css";
 function Navbar() {
   return (
     <>
-      <nav>
+      <nav className="Color">
         <a href="http://localhost:3000/home" className="site-title">
-          MainTech BS
+          MainTech Flower BS
         </a>
         <div>
           <ul id="navbar">

@@ -24,13 +24,13 @@ nav {
   #navbar li a {
     text-decoration: none;
     font-weight: 600;
-    color: blueviolet;
+    color: black;
     transition: 0.3s ease-in-out;
   }
   
-  #navbar li a:hover,
-  #navbar li a.active {
-    color: lightcoral;
+  #navbar li a:hover
+  {
+    color: coral;
   }
   
  
@@ -43,9 +43,9 @@ nav {
     font-weight: 800;
   }
   
-  body {
-    margin: 0;
+  .Color{
     background-color: white;
+
   }
   
   
