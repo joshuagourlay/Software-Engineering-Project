@@ -1,15 +1,16 @@
 .card-container{
-    width:300px;
+    width:220px;
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px;
     transition:0.3s;
     animation: ease-in-out;
+
 }
 
-.image-container img{
-    overflow: hidden;
-    height:200px;
-
+.image-container{
+    height: 200px; 
+    width: 220px;
+    object-fit:cover ;
 }
 .card-container:hover{
     transform: scale(1.1);

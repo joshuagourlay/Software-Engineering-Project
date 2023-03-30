@@ -1,4 +1,5 @@
 import React from "react";
+import "./Card.css"
 
 export default function Card({title,imageUrl,body})
 {
@@ -15,7 +16,7 @@ export default function Card({title,imageUrl,body})
                 </div>
                 <div className="btn">
                     <button>
-                        <a> View More</a>
+                        <a href="true" target="_blank" rel="noreferrer" > View More</a>
                     </button>
                 </div>
             </div>

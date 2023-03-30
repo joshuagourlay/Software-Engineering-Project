@@ -16,10 +16,10 @@ function Navbar() {
               </a>
             </li>
             <li>
-              <a href="http://localhost:3000/Inventory" >Inventory</a>
+              <a href="http://localhost:3000/Inventory" target="_blank" rel="noreferrer" >Inventory</a>
             </li>
             <li>
-              <a href="http://localhost:3000/signin">Sign in</a>
+              <a href="http://localhost:3000/signin" target="_blank" rel="noreferrer" >Sign in </a>
             </li>
           </ul>
         </div>
