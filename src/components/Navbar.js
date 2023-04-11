@@ -11,15 +11,15 @@ function Navbar() {
         <div>
           <ul id="navbar">
             <li>
-              <a className="active" href="http://localhost:3000/home">
+              <a className="active" href="home">
                 Home
               </a>
             </li>
             <li>
-              <a href="http://localhost:3000/Inventory" target="_blank" rel="noreferrer" >Inventory</a>
+              <a href="Inventory"  >Inventory</a>
             </li>
             <li>
-              <a href="http://localhost:3000/signin" target="_blank" rel="noreferrer" >Sign in </a>
+              <a href="signin"  >Sign in </a>
             </li>
           </ul>
         </div>
