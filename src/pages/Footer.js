@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.css';
 import { FaCcVisa, FaPaypal, FaCcMastercard, FaApplePay } from 'react-icons/fa';
+import About from "../images/user.png"
 
 
 function Footer() {
@@ -23,12 +24,16 @@ function Footer() {
             {/*Business Hour */}
             <div className='business-section'>
                 <div className='row'>
-                    <h3>Business Hour</h3>
+                    {/*<h3>Business Hour</h3>*/}
                 </div>
                 <div className='row'>
+                    <img src={About} alt="" style={{ width: 500}}> 
+                    </img>
+                    {/*
                     <p>Monday - Friday: 9am - 5pm</p>
                     <p>Saturday: 8am - 2pm</p>
                     <p>Sunday: Closed</p>
+                    */}
                 </div>
             </div>
 

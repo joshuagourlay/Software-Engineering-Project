@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/Home" element={<Home cName="hero" heroImg={flower} 
         title="GIFT A BOUQUET" text="FOR THEIR SPECIAL DAY" buttonText="SHOP NOW" 
         url="http://localhost:3000/Inventory" 
-        btnClass="show"/>}/>
+        btnClass="btn btn-two"/>}/>
 
         <Route path="/Inventory" element={<Inventory cName="hero-in" heroImg={flower2} 
         title="OUR SPECIALS!" text="SPRING SEASONS BEST"/>}/>
