@@ -2,9 +2,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: whitesmoke;
+    background: rgb(73, 0, 104);
     box-shadow: 10 10px 10px rgba(0, 0, 0, 0.5);
-    background-color: rgb(210, 238, 222);
+    background-color: rgb(71, 2, 94);
     padding:10px 10px 10px 10px;
 
   }
@@ -24,13 +24,16 @@ nav {
   #navbar li a {
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: rgb(104,53,56);
     transition: 0.3s ease-in-out;
+    font-size: 1.2rem;
   }
   
   #navbar li a:hover
   {
-    color: coral;
+    color: rgb(255, 255, 255);
+    /*background-color: black;*/
+    /*box-shadow: 10 10px 10px rgba(0, 0, 0, 0.5);*/
   }
   
  
@@ -39,12 +42,12 @@ nav {
     font-family:'Poppins',Arial, Helvetica, sans-serif;
     text-decoration: none;
     font-size: 2rem;
-    color: Black;
-    font-weight: 800;
+    color: rgb(104,53,56);
+    font-weight: 1000;
   }
   
   .Color{
-    background-color: white;
+    background-color: rgb(241,148,180);
 
   }
   

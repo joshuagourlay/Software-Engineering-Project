@@ -26,7 +26,7 @@ export const Signin=() =>{
                 </div>
                 
             </div>
-                <h1>Sign-in Page</h1>
+                <h1>Login/Register</h1>
             <div>
                 <div>
                 <img src={Email} alt="email" className="email"/>
@@ -36,10 +36,10 @@ export const Signin=() =>{
                 <img src={Pass} alt="pass" className="pass"/>
                 <input value={pass} onChange={(e)=>setPass(e.target.value)} type="password" placeholder="password" className="name"/>
                 </div>
-                <button className= "b1" type="submit">Log in</button>
+                <button className= "b1" type="submit">Log In</button>
             </div>
-            
-                <button className="Link"> Dont have an account? Register here.</button>
+                <h3>Don't have an account? Register here</h3>
+                <button className="Link">Sign up</button>
         </div>
         </div>
     </form>
