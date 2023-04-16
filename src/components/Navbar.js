@@ -1,25 +1,29 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import "./NavbarStyle.css";
+
 function Navbar() {
   return (
     <>
       <nav className="Color">
-        <a href="http://localhost:3000/home" className="site-title">
+        <Link to="/home" className="site-title">
           MainTech Flower BS
-        </a>
+        </Link>
         <div>
           <ul id="navbar">
             <li>
-              <a className="active" href="home">
+              <Link className="active" to="/home">
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="Inventory"  >Inventory</a>
+              <Link to="/Inventory">Inventory</Link>
             </li>
             <li>
-              <a href="signin"  >Sign in </a>
+              <Link to="/signin">Sign in</Link>
+            </li>
+            <li>
+              <Link to="/purchase">Purchase</Link>
             </li>
           </ul>
         </div>
