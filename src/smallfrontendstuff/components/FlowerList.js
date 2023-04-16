@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services';
 import PurchaseForm from './PurchaseForm';
+import './FlowerList.css';
 
 function FlowerList() {
   const [flowers, setFlowers] = useState([]);
@@ -16,9 +17,9 @@ function FlowerList() {
   }, []);
 
   return (
-    <div>
-      <h2>Flower List</h2>
-      <table>
+    <div className="flower-list-container">
+      <h2 className="flower-list-heading">Flower List</h2>
+      <table className="flower-list-table">
         <thead>
           <tr>
             <th>ID</th>
