@@ -2,6 +2,7 @@
     width: 100%;
     height:65vh;
     position:relative;
+    padding-top: var(--navbar-height); /*This is important. Adds padding based on navbar size*/
 }
 
 img
@@ -26,6 +27,7 @@ img
     font-weight: 800;
     background:whitesmoke;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     
 

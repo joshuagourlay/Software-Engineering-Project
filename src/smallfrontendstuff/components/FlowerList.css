@@ -29,9 +29,13 @@
 }
 
 .flower-list-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
+}
+
+.flower-list-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
 }
 
 .flower-list-table tbody tr:hover {
-  background-color: #ddd;
+  background-color: #c9c9c9;
 }

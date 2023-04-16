@@ -3,7 +3,7 @@ import Footer from "./Footer.js"
 
 export default function Home(props) {
     return(  
-    <div className={props.cName}>
+    <div className={`hero ${props.cName}`}>
       <img src={props.heroImg} alt="HerpImg"/>
 
 

@@ -3,7 +3,7 @@ import Card from "./Card.js"
 
 export default function Inventory(props) {
     return(  
-      <div className={props.cName}>
+      <div className={`hero-in ${props.cName}`}>
       <img src={props.heroImg} alt="HerpImg"/>
 
 
