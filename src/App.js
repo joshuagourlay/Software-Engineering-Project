@@ -35,8 +35,8 @@ export default function App() {
               <Home
                 cName="hero"
                 heroImg={flower}
-                title="GIFT A BOUQUET"
-                text="FOR THEIR SPECIAL DAY"
+                title="FLOWERS FOR ANY OCCASION"
+                text="GIFT A BOUQUET TODAY"
                 buttonText="SHOP NOW"
                 url="http://localhost:3000/Inventory"
                 btnClass="btn btn-two"

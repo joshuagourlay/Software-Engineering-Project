@@ -7,7 +7,7 @@ export default function Inventory(props) {
       <img src={props.heroImg} alt="HerpImg"/>
 
 
-      <div className="hero-text">
+      <div className="header hero-text">
         <h1>{props.title}</h1>
         <p> {props.text}</p>
         <a href={props.url} className={props.btnClass}>

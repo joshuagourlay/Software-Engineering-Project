@@ -1,19 +1,36 @@
 :root {
     --hero-text-color: whitesmoke;
     --hero-text-shadow-color: rgb(76, 76, 76);
+    --about-translate: 0;
   }
   
   .hero {
     width: 100%;
     height: 65vh;
+    max-height: 100vh;
     position: relative;
     padding-top: var(--navbar-height);
+    overflow: hidden;
   }
   
+  .img-wrapper {
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-container {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+
   .hero img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
+    z-index: -1;
   }
   
   .hero-text {
@@ -23,22 +40,35 @@
     transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
   
   .hero-text h1 {
     font-size: 3rem;
     font-weight: 800;
-    background: var(--hero-text-color);
+    background: linear-gradient(to right, #F1948A, #FFC312);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 2px var(--hero-text-shadow-color);
+    text-shadow: none;
   }
+
+  .hero-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #F1948A, #FFC312);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+  
   
   .hero-text p {
     font-size: 1.3rem;
     font-weight: 800;
-    color: var(--hero-text-color);
+    color: linear-gradient(to right, #F1948A, #FFC312);
     padding: 0.5rem 0 2rem 0;
     text-align: center;
     text-shadow: 2px 2px 2px var(--hero-text-shadow-color);
@@ -110,6 +140,8 @@
   .des-text {
     margin: 1rem 4rem 1rem 6rem;
     width: 60%;
+    transform: translateY(var(--about-translate));
+    transition: transform 0.5s ease-out;
   }
   
   .des-text h1 {
@@ -119,7 +151,21 @@
   
   .maindisplay {
     display: flex;
+    position: relative;
+    z-index: -2;
+    /*margin-top: -5px;*/
   }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }  
   
   .businesshours {
     margin: 1rem 6rem 1rem 0;
@@ -134,9 +180,35 @@
   }
   
   .businesshours p {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
   
+  .btn-two {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(241, 148, 180);
+    border: 2px solid white;
+    border-radius: 6px;
+  }
+
+  .btn-two:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .btn-two span {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .time {
+    padding-left: 25px;
+  }
+
   @media screen and (max-width: 555px) {
     .maindisplay {
       flex-direction: column;
@@ -152,4 +224,3 @@
       font-size: 1.5rem;
     }
   }
-  
