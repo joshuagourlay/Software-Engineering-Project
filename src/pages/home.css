@@ -1,159 +1,226 @@
-.hero{
+:root {
+    --hero-text-color: whitesmoke;
+    --hero-text-shadow-color: rgb(76, 76, 76);
+    --about-translate: 0;
+  }
+  
+  .hero {
     width: 100%;
-    height:65vh;
-    position:relative;
-    padding-top: var(--navbar-height); /*This is important. Adds padding based on navbar size*/
-}
+    height: 65vh;
+    max-height: 100vh;
+    position: relative;
+    padding-top: var(--navbar-height);
+    overflow: hidden;
+  }
+  
+  .img-wrapper {
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-container {
+    height: 100%;
+    overflow: hidden;
+  }
+  
 
-img
-{
-    width:100%;
-    height:100%;
+  .hero img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-
-}
-.hero-text{
-    position:absolute;
-    top:35%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:100%;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     text-align: center;
-    
-
-}
-.hero-text h1{
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text h1 {
     font-size: 3rem;
     font-weight: 800;
-    background:whitesmoke;
+    background: linear-gradient(to right, #F1948A, #FFC312);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    
+    text-shadow: none;
+  }
 
-}
-.hero-text p{
+  .hero-text h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #F1948A, #FFC312);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+  }
+  
+  
+  .hero-text p {
     font-size: 1.3rem;
     font-weight: 800;
-    color:whitesmoke;
-    padding:0.5rem 0 2rem 0;
+    color: linear-gradient(to right, #F1948A, #FFC312);
+    padding: 0.5rem 0 2rem 0;
     text-align: center;
-    text-shadow: 2px 2px 2px rgb(76, 76, 76);
-}
-
-.hero-text .btn{
+    text-shadow: 2px 2px 2px var(--hero-text-shadow-color);
+  }
+  
+  .hero-text .btn {
+    display: inline-block;
     line-height: 50px;
-    height: 100px;
+    height: 50px;
     font-size: 2.5rem;
     text-align: center;
     width: 200px;
     cursor: pointer;
-    padding-left: 20px;
-    padding-right: 20px;
-    /*
-    text-decoration: none;
-    background-color: white;
-    padding: 1rem 2rem;
-    border-radius: 6px;
+    padding: 0 20px;
     font-size: 1.1rem;
     font-weight: bold;
     letter-spacing: 2px;
+    color: var(--text-color);
+    position: relative;
+    transition: all 0.5s;
+  }
+  
+  .hero-text .btn::before,
+  .hero-text .btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--secondary-color);
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  .hero-text .btn::before {
+    top: 0;
+    left: 0;
+  }
+  
+  .hero-text .btn::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .hero-text .btn:hover {
+    color: var(--primary-color);
+  }
+  
+  .hero-text .btn:hover::before,
+  .hero-text .btn:hover::after {
+    width: 0;
+    height: 0;
+  }
+  
+  @media screen and (max-width: 555px) {
+    .hero-text h1 {
+      padding: 10px 20px;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      padding: 0 0 2rem 0;
+    }
+    .hero-text .btn {
+      font-size: 1rem;
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  
+  .des-text {
+    margin: 1rem 4rem 1rem 6rem;
+    width: 60%;
+    transform: translateY(var(--about-translate));
+    transition: transform 0.5s ease-out;
+  }
+  
+  .des-text h1 {
+    font-size: 3rem;
+    line-height: 1.8;
+  }
+  
+  .maindisplay {
+    display: flex;
+    position: relative;
+    z-index: -2;
+    /*margin-top: -5px;*/
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }  
+  
+  .businesshours {
+    margin: 1rem 6rem 1rem 0;
+    font-size: 3rem;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #683538;
+  }
+  
+  .businesshours h2 {
+    padding-bottom: 10px;
     color: black;
-    */
-
-}
-
-.btn-two {
+  }
+  
+  .businesshours p {
+    font-size: 1.2rem;
+  }
+  
+  .btn-two {
     color: #FFF;
     transition: all 0.5s;
-    position: relative; 
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(241, 148, 180);
+    border: 2px solid white;
+    border-radius: 6px;
   }
+
   .btn-two:hover {
-    color: rgb(241,148,180);
+    background-color: rgba(255, 255, 255, 0.1);
   }
+  
   .btn-two span {
-    z-index: 2; 
+    z-index: 2;
     display: block;
     position: absolute;
     width: 100%;
-    height: 100%; 
-  }
-  .btn-two::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    z-index: 1;
-    transition: all 0.5s;
-    border: 1px solid rgba(255,255,255,0.2);
-    background-color: rgba(255,255,255,0.1);
-  }
-  .btn-two::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: all 0.5s;
-    border: 1px solid rgba(255,255,255,0.2);
-    background-color: rgba(255,255,255,0.1);
-  }
-  .btn-two:hover::before {
-    transform: rotate(-45deg);
-    background-color: rgba(255,255,255,0);
-  }
-  .btn-two:hover::after {
-    transform: rotate(45deg);
-    background-color: rgba(255,255,255,0);
-    
   }
 
+  .time {
+    padding-left: 25px;
+  }
+
+  @media screen and (max-width: 555px) {
+    .maindisplay {
+      flex-direction: column;
+    }
   
+    .des-text {
+      margin: 1rem 2rem;
+      width: 100%;
+    }
   
-@media screen and (max-width:555px)
-{
-    .hero-text h1{
-        padding: 10px 20px;
+    .businesshours {
+      margin: 1rem 2rem;
+      font-size: 1.5rem;
     }
-    .hero-text p{
-        font-size:1.1rem;
-        padding:0 0 2rem 0;
-    }
-    .hero-text .show{
-        padding:.6rem 1.1rem;
-        border-radius: 6px;
-        font-size:1rem;
-    }
-
-}
-
-.des-text
-{
-    margin-left: 6rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    margin-right: 4rem;
-    align-items: center;
-    width: 60%;
-}
-
-.des-text h1{
-    font-size: 3 rem;
-    line-height: 1.8;
-}
-
-.maindisplay {
-    display: flex;
-}
-
-.businesshours{
-    margin-top: 1rem;
-    margin-right: 6rem;
-    font-size: 3 rem;
-    font-family:'Poppins',Arial, Helvetica, sans-serif;
-    color: #683538;
-}
+  }

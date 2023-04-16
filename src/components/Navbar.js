@@ -8,7 +8,7 @@ function Navbar() {
     <>
       <nav className="Color">
         <Link to="/home" className="site-title">
-          MainTech Flower BS
+          Bayside Flowers Inc.
         </Link>
         <div>
           <ul id="navbar">
