@@ -58,6 +58,13 @@ class Employee(db.Model):
     salary = db.Column(db.Float)
     password = db.Column(db.String(50))
 
+class Feedback(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name= db.Column(db.String(50))
+    email = db.Column(db.String(100))
+    message = db.Column(db.String(255))
+    created_at = db.Column(db.Date)
+
 @app.route('/api/flowers', methods=['GET'])
 def get_flowers():
     flowers = Flower.query.all()
