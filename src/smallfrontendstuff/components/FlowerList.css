@@ -1,41 +1,113 @@
-.flower-list-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
+
+.wrapper{
+  display:block;
+  grid-template-areas: repeat(auto-fit,minmax(12rem,16rem));
+  gap:5rem;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-.flower-list-heading {
+
+main{
+  max-width: 1500px;
+  width: 95%;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
+
+main .card{
+  width: 300px;
+  flex: 1 1 210px;
   text-align: center;
-  font-size: 2rem;
-  color: #3a3a3a;
-  margin-bottom: 1.5rem;
+  height: 800px;
+  border: 2px solid lightgray;
+  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  
 }
 
-.flower-list-table {
+main .card:hover{
+  background-color: rgb(244, 196, 212);
+  transition: all .5s;
+  padding: 20px;
+}
+
+main .card .image{
+  height: 40%;
+  margin-bottom: 10px;
+}
+
+main .card .image img{
   width: 100%;
-  border-collapse: collapse;
+  height: 100%;
+  object-fit: cover;
 }
 
-.flower-list-table th,
-.flower-list-table td {
-  padding: 1rem;
+main .card .caption{
+  padding-left: 1em;
   text-align: left;
-  border-bottom: 1px solid #ccc;
+  line-height: 1em;
+  height: 25%;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
-.flower-list-table th {
-  background-color: #3a3a3a;
-  color: #fff;
+main .card .caption p{
+  font-size: 0.8rem;
 }
 
-.flower-list-table tbody tr:nth-child(even) {
-  background-color: #e6e6e6;
+main .card .caption h1{
+  font-size: 1.2rem;
+  
 }
 
-.flower-list-table tbody tr:nth-child(odd) {
-    background-color: #f2f2f2;
+main .card .caption h2{
+  font-size: 1rem;
+  padding-top: 20px;
+  color: green;
 }
 
-.flower-list-table tbody tr:hover {
-  background-color: #c9c9c9;
+del{
+  text-decoration: line-through;
 }
+
+main .card a{
+  width: 50%;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.view{
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #000000;
+  padding: 8px 12px;
+  margin-top: 20px;
+  cursor: pointer; 
+}
+

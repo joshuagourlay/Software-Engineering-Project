@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./NavbarStyle.css";
 
+
 function Navbar() {
   return (
     <>
@@ -24,6 +25,9 @@ function Navbar() {
             </li>
             <li>
               <Link to="/purchase">Purchase</Link>
+            </li>
+            <li>
+              <Link to="/FlowerList">FlowerList</Link>
             </li>
           </ul>
         </div>
