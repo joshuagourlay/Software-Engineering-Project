@@ -5,13 +5,16 @@ import Email from "../images/email.webp"
 import Pass from "../images/pass.jpeg"
 import api from '../smallfrontendstuff/services';
 import { useUser } from '../smallfrontendstuff/UserContext';
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 export const Signin=() =>{
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const { setUser } = useUser();
+    const navigate = useNavigate();
+
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -29,11 +32,12 @@ export const Signin=() =>{
         })
         .then((response) => {
             // Show success message and clear form
-            alert('Login successful!');
+            // alert('Login successful!'); <--- no longer needed due to welcome page
             setUser({ cid: response.data.cid }); // Store the customer ID in the UserContext
             setUsername('');
             setPassword('');
             setError('');
+            navigate('/welcome', { state: { name: response.data.name } });
         })
         .catch((error) => {
             // Show error message

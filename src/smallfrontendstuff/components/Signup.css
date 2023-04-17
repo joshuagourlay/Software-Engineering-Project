@@ -32,17 +32,29 @@ form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  align-items: flex-start;
 }
 
 label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   font-size: 20px;
   color: rgb(104, 53, 56);
+  width: 100%;
+}
+
+label span {
+  min-width: 120px; /* Adjust this value based on the longest label text */
 }
 
 input,
 textarea {
-  width: 300px;
-  height: 50px;
+  margin-left: 10px;
+  width: calc(100% - 130px);
+  height: auto; /* Make the height of input elements auto */
+  padding: 8px; /* Add some padding for better appearance */
   border-radius: 5px;
   border: none;
   outline: none;
@@ -51,7 +63,9 @@ textarea {
 
 textarea {
   resize: none;
+  height: 100px;
 }
+
 
 button {
   width: 150px;
@@ -65,6 +79,7 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+  align-self: center;
 }
 
 button:hover {

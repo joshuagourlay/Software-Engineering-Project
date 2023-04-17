@@ -1,8 +1,18 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavbarStyle.css";
+import { useUser } from '../smallfrontendstuff/UserContext';
 
 function Navbar() {
+  const { user, setUser } = useUser();
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    setUser({}); // clear user info
+    localStorage.removeItem("user"); // remove user's cache
+    navigate('/home'); // Redirect user to home page
+  };
+
   return (
     <>
       <nav className="Color">
@@ -20,7 +30,14 @@ function Navbar() {
               <Link to="/Inventory">Inventory</Link>
             </li>
             <li>
-              <Link to="/signin">Sign in</Link>
+              <li>
+                {user.cid ? (
+                  <Link onClick={handleSignOut} className="signout-link">Sign out</Link>
+                ) : (
+                  <Link to="/signin">Sign in</Link>
+                )}
+              </li>
+
             </li>
             <li>
               <Link to="/purchase">Purchase</Link>

@@ -121,7 +121,7 @@ def login():
     customer = Customer.query.filter_by(username=data['username']).first()
     # Check if the customer exists and if the entered password matches the hashed password in the database
     if customer and customer.password == hashlib.sha256(data['password'].encode('utf-8')).hexdigest():
-        return jsonify({'message': 'Login successful', 'cid': customer.cid}), 200
+        return jsonify({'message': 'Login successful', 'cid': customer.cid, 'name': customer.first_name}), 200
     else:
         return jsonify({'error': 'Invalid username or password'}), 401
 
