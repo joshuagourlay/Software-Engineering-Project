@@ -6,6 +6,7 @@ import { Signin } from './pages/credentials';
 import Purchase from './smallfrontendstuff/purchase';
 import flower from './images/flower.jpeg';
 import flower2 from './images/flower2.webp';
+import SignUp from './smallfrontendstuff/components/SignUp';
 
 export default function App() {
   return (
@@ -57,6 +58,7 @@ export default function App() {
           />
           <Route path="/signin" element={<Signin />} />
           <Route path="/purchase" element={<Purchase />} />
+          <Route path="/signUp" element={<SignUp />} />
         </Routes>
       </BrowserRouter>
     </div>

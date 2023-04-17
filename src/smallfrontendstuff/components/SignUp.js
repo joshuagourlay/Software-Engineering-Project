@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from '../services';
+import './Signup.css'
 
 function SignUp() {
   const [firstName, setFirstName] = useState('');
