@@ -67,7 +67,7 @@ class Feedback(db.Model):
 
 @app.route('/api/flowers', methods=['GET'])
 def get_flowers():
-    flowers = Flower.query.all()
+    flowers = Flower.query.order_by(Flower.fid).all()
     response = []
     for flower in flowers:
         response.append({
