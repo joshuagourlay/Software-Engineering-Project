@@ -6,8 +6,9 @@ import SignUp from './components/SignUp';
 import Login from './components/Login';
 import EmployeeLogin from './components/EmployeeLogin';
 import EmployeeRegister from './components/EmployeeRegister';
-import AdjustPriceForm from './components/AdjustPriceForm';
+import AdjustPriceForm from './components/ManageFlowers';
 import FeedbackForm from './components/FeedbackForm';
+import ManageFlowerForm from './components/ManageFlowers';
 
 function Purchase() {
   return (
@@ -22,7 +23,7 @@ function Purchase() {
         <Login />
         <EmployeeRegister />
         <EmployeeLogin />
-        <AdjustPriceForm /> 
+        <ManageFlowerForm /> 
         <FeedbackForm />  
       </main>
     </div>
