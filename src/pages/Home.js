@@ -119,7 +119,7 @@ export default function Home(props) {
           <h2>About Us</h2>
           <p></p>
           <p>
-          At Maintech Flowers by the Bay, we take pride in being a local 
+          At Bayside Flowers, we take pride in being a local 
           flower shop that has been serving our community for 25 years. We 
           believe in the power of flowers to brighten up anyone's day and 
           make special occasions even more memorable. Whether you're looking 
@@ -136,7 +136,7 @@ export default function Home(props) {
           with a beautiful bouquet.
           </p>
           <p>
-          At Maintech Flowers by the Bay, we are more than just a flower shop
+          At Bayside Flowers, we are more than just a flower shop
            - we are a part of the community. We are proud to support local 
            events and organizations, and we love seeing our flowers bring joy 
            to the people around us. Come visit us today and discover why we 
