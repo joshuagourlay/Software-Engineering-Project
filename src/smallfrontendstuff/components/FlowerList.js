@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import './FlowerList.css';
 import api from '../services';
 import PurchaseForm from './PurchaseForm';
-import './FlowerList.css';
+
 
 function FlowerList() {
   const [flowers, setFlowers] = useState([]);
@@ -17,9 +18,10 @@ function FlowerList() {
   }, []);
 
   return (
+    <div className='flowerlist-wrapper'>
     <div  className="main">
           {flowers.map((flower) => (
-            <th key={flower.fid} className="card">
+            <div key={flower.fid} className="card">
               <div className='image'>
                   {(() => {
                     if (flower.name === "Red Rose") {
@@ -80,12 +82,14 @@ function FlowerList() {
                   <p>Availability: {flower.availability}</p>
                   <p>Minimum Order: {flower.min_order_quantity}</p>
                   <p>ID: {flower.fid}</p>
+                  <p>In-Stock: {flower.stock}</p>
                 </div>
                 </div>
               </div>
               <PurchaseForm flowerId={flower.fid} />
-            </th>
+            </div>
           ))}
+    </div>
     </div>
   );
 }

@@ -28,23 +28,14 @@ function Navbar() {
               </Link>
             </li>
             <li>
-              <Link to="/Inventory">Inventory</Link>
-            </li>
-            <li>
-              <li>
-                {user.cid ? (
-                  <Link onClick={handleSignOut} className="signout-link">Sign out</Link>
-                ) : (
-                  <Link to="/signin">Sign in</Link>
-                )}
-              </li>
-
-            </li>
-            <li>
               <Link to="/purchase">Purchase</Link>
             </li>
             <li>
-              <Link to="/FlowerList">FlowerList</Link>
+              {user.cid ? (
+                <Link onClick={handleSignOut} className="signout-link">Sign out</Link>
+              ) : (
+                <Link to="/signin">Sign in</Link>
+              )}
             </li>
           </ul>
         </div>
