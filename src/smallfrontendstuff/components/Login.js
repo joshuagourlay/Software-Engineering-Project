@@ -24,7 +24,7 @@ function Login() {
     })
       .then((response) => {
         // Show success message and clear form
-        alert('Login successful!');
+        alert('Customer login successful!');
         setUser({ cid: response.data.cid }); // Store the customer ID in the UserContext
         setUsername('');
         setPassword('');
