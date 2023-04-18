@@ -37,7 +37,7 @@ function MainRoutes() {
               title="GIFT A BOUQUET"
               text="FOR THEIR SPECIAL DAY"
               buttonText="SHOP NOW"
-              url="http://localhost:3000/Inventory"
+              url="http://localhost:3000/purchase"
               btnClass="show"
             />
           }
@@ -52,7 +52,7 @@ function MainRoutes() {
               title="FLOWERS FOR ANY OCCASION"
               text="GIFT A BOUQUET TODAY"
               buttonText="SHOP NOW"
-              url="http://localhost:3000/Inventory"
+              url="http://localhost:3000/purchase"
               btnClass="btn btn-two"
             />
           }

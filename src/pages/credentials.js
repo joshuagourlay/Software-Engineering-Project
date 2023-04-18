@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./credentials.css"
-import profile from "../images/user.png"
+
 import Email from "../images/email.webp"
 import Pass from "../images/pass.jpeg"
 import api from '../smallfrontendstuff/services';
@@ -50,10 +50,7 @@ export const Signin=() =>{
     <div className="sub-main">
         <div>
             <div className="imgs">
-                <div className="container-image">
-                    <img src={profile} alt="profile" className="profile" />
-
-                </div>
+                <h1 style ={{color: "white"}}>Bayside Flowers Inc.</h1>
                 
             </div>
                 <h1>Login/Register</h1>
@@ -69,8 +66,10 @@ export const Signin=() =>{
                 <button className= "b1" type="submit">Log In</button>
             </div>
             <h3>Don't have an account? Register here</h3>
-            <Link to="/signup" className="Link">
+            <Link to="/signup">
+                <button className="b1">
                 Sign up
+                </button>
             </Link>
         </div>
         {error && <div className="error">{error}</div>}
