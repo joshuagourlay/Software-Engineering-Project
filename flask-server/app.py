@@ -67,7 +67,7 @@ class Feedback(db.Model):
 
 @app.route('/api/flowers', methods=['GET'])
 def get_flowers():
-    flowers = Flower.query.all()
+    flowers = Flower.query.order_by(Flower.fid).all()
     response = []
     for flower in flowers:
         response.append({
@@ -121,7 +121,7 @@ def login():
     customer = Customer.query.filter_by(username=data['username']).first()
     # Check if the customer exists and if the entered password matches the hashed password in the database
     if customer and customer.password == hashlib.sha256(data['password'].encode('utf-8')).hexdigest():
-        return jsonify({'message': 'Login successful', 'cid': customer.cid}), 200
+        return jsonify({'message': 'Login successful', 'cid': customer.cid, 'name': customer.first_name}), 200
     else:
         return jsonify({'error': 'Invalid username or password'}), 401
 
@@ -248,11 +248,11 @@ def get_employee_id(email):
     else:
         return None
 
-@app.route('/api/adjust_price', methods=['PUT'])
-def adjust_price():
+@app.route('/api/manage_flower', methods=['PUT'])
+def manage_price():
     data = request.json
     # Check if all required fields are present
-    if not all(key in data for key in ('eid', 'fid', 'new_price')):
+    if not all(key in data for key in ('eid', 'fid', 'new_price', 'new_stock')):
         return jsonify({'error': 'Missing required fields'}), 400
     # Get the flower from the database
     flower = Flower.query.get(data['fid'])
@@ -263,10 +263,13 @@ def adjust_price():
     if employee is None:
         return jsonify({'error': 'Employee not found'}), 404
     # Check if user has permission to adjust price
-    if not employee.job_title == "Cute Staff":
+    if not employee.job_title == "Cute staff":
         return jsonify({'error': 'Unauthorized'}), 401
     # Update the price of the flower
     flower.price = data['new_price']
+    flower.stock = flower.stock + int(data['new_stock'])
+    if flower.stock >= flower.min_order_quantity:
+        flower.availability = 'Yes'
     db.session.commit()
     return jsonify({'message': 'Price adjusted successfully', 'fid': flower.fid, 'flower_name': flower.name, 'new_price': flower.price}), 200
 

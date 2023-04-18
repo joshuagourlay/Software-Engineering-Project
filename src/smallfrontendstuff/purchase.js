@@ -1,7 +1,8 @@
 import React from 'react';
 import './purchase.css';
 import FlowerList from './components/FlowerList';
-import EmployeeLogin from "./components/EmployeeLogin"
+import EmployeeLogin from "./components/EmployeeLogin";
+
 
 function Purchase() {
   return (
@@ -9,7 +10,6 @@ function Purchase() {
       <main>
         <FlowerList />
         <EmployeeLogin/>
-        
       </main>
     </div>
   );

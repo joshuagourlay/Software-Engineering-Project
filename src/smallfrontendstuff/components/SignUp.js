@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import api from '../services';
+import './SignUp.css'
 
 function SignUp() {
   const [firstName, setFirstName] = useState('');
@@ -56,41 +57,44 @@ function SignUp() {
   };
 
   return (
-    <div>
-      <h2>Sign Up</h2>
-      {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+    <div className="main">
+      <div className="sub-main">
+        <h2>Sign Up</h2>
+        {error && <div className="error">{error}</div>}
+        <form onSubmit={handleSubmit}>
         <label>
-          First Name:
+          <span>First Name:</span>
           <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
         </label>
         <label>
-          Last Name:
+          <span>Last Name:</span>
           <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
         </label>
         <label>
-          Email:
+          <span>Email:</span>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
         <label>
-          Phone:
+          <span>Phone:</span>
           <input type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
         </label>
         <label>
-          Address:
+          <span>Address:</span>
           <textarea value={address} onChange={(e) => setAddress(e.target.value)} />
         </label>
         <label>
-          Username:
+          <span>Username:</span>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </label>
         <label>
-          Password:
+          <span>Password:</span>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
-        <button type="submit">Sign Up</button>
-      </form>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
     </div>
+
   );
 }
 
