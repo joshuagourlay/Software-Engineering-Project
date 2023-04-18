@@ -34,6 +34,7 @@ nav {
 
 #navbar li a {
   text-decoration: none;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: var(--text-color);
   transition: 0.3s ease-in-out;

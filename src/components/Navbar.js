@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./NavbarStyle.css";
 import { useUser } from '../smallfrontendstuff/UserContext';
 
+
 function Navbar() {
   const { user, setUser } = useUser();
   const navigate = useNavigate();
@@ -41,6 +42,9 @@ function Navbar() {
             </li>
             <li>
               <Link to="/purchase">Purchase</Link>
+            </li>
+            <li>
+              <Link to="/FlowerList">FlowerList</Link>
             </li>
           </ul>
         </div>
