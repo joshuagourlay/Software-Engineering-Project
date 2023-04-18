@@ -33,16 +33,16 @@ function PurchaseForm({ flowerId }) {
   };
 
   return (
-    <div className='idk'>
       
       <form className='hello' onSubmit={handleSubmit}>
       {error && <div className="error">{error}</div>}
-        <label>Purchase Quantity:<input className='input1' type="number" value={purchaseQuantity} onChange={(e) => setPurchaseQuantity(e.target.value)} />
+        <label style={{textsize: 8, paddingBottom: 40}}>Purchase Quantity:
+        
+          <input className='input1' type="number" value={purchaseQuantity} onChange={(e) => setPurchaseQuantity(e.target.value)} />
         </label>
-        <button classname ="btn2" type="submit">Purchase</button>
+        <button type="submit">Purchase</button>
       </form>
       
-    </div>
   );
 }
 

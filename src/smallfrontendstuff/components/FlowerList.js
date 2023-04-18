@@ -85,8 +85,10 @@ function FlowerList() {
                   <p>In-Stock: {flower.stock}</p>
                 </div>
                 </div>
-              </div>
+              </div >
+              <div className='purch'>
               <PurchaseForm flowerId={flower.fid} />
+              </div>
             </div>
           ))}
     </div>
